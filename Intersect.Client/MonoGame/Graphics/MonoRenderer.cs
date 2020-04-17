@@ -733,6 +733,9 @@ namespace Intersect.Client.MonoGame.Graphics
 
             var allowedResolutions = new[]
             {
+                new Resolution(800, 600),
+                new Resolution(1024, 768),
+                new Resolution(1024, 720),
                 new Resolution(1280, 720),
                 new Resolution(1280, 768),
                 new Resolution(1280, 1024),
@@ -797,7 +800,7 @@ namespace Intersect.Client.MonoGame.Graphics
             mGraphics.PreferredBackBufferHeight = resolution.Y;
 
             UpdateGraphicsState(
-                mGraphics?.PreferredBackBufferWidth ?? 1280, mGraphics?.PreferredBackBufferHeight ?? 720, true
+                mGraphics?.PreferredBackBufferWidth ?? 800, mGraphics?.PreferredBackBufferHeight ?? 600, true
             );
 
             if (mWhiteTexture == null)
